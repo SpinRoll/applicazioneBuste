@@ -298,8 +298,27 @@ def upload_file():
             if indice_inizio != -1:
                 testo = testo[indice_inizio:]
                 risultati = {
-                    'Z00001': Z00001(testo),
-                    'Z00250': Z00250(testo),
+                    'Retribuzione:': Z00001(testo),
+                    'Ferie godute:': Z00250(testo),
+                    'Straordinario al 25%:': Z40025(testo),
+                    'Festività godute:': ZP0100(testo),
+                    'Arrotondamento del mese precedente:': ZP9960(testo),
+                    'Contributo IVS:': Z00000(testo),
+                    'Contributo CIGS:': Z00071(testo),
+                    'Contributo METASALUTE:': Z31270(testo),
+                    'Imponibile IRPEF:': F02000(testo),
+                    'FIRPEF lorda:': F02010(testo),
+                    'Detrazioni per lavoratori dipendenti:': F02500(testo),
+                    'Addizionale regionale:': F03020(testo),
+                    'Addizionale comunale:': F09110(testo),
+                    'Retribuzione utile T.F.R.:': F09130(testo),
+                    'Retribuzione utile T.F.R.:': TFR(testo),
+                    'Quota T.F.R.:': Quota_TFR(testo),
+                    'Imp. INAIL:': INAIL(testo),
+                    'Ferie:': Ferie(testo),
+                    'Permesso P.A.R.:': Permesso_PAR(testo),
+                    'RAL:': RAL(testo),
+
                     # Aggiungi qui le altre funzioni
                 }
                 return render_template('risultati.html', risultati=risultati)
