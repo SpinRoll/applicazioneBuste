@@ -292,7 +292,7 @@ def upload_file():
         # Estrai il testo da ogni pagina
         for pagina in lettore.pages:
             testo = pagina.extract_text()
-            indice_inizio = testo.find('**Z00001')
+            indice_inizio = testo.find('**Z00')
 
             # Se i dati sono presenti, estrai solo la parte di testo che ti interessa
             if indice_inizio != -1:
