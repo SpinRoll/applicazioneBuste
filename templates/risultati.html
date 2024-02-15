@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Risultati</h1>
+    {% for nome, risultato in risultati.items() %}
+        <h2>{{ nome }}</h2>
+        <p>{{ risultato }}</p>
+    {% endfor %}
+</body>
+</html>
